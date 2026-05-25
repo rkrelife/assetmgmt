@@ -1,9 +1,9 @@
 {
-  "catalog_version": "1.0",
+  "catalog_version": "1.2",
   "last_updated": "2026-05-25",
   "summary": {
     "total_candidates": 1,
-    "total_owned": 0,
+    "total_owned": 1,
     "pending_assessment": 1,
     "approved": 0,
     "rejected": 0
@@ -21,5 +21,28 @@
       "file": "properties/candidates/pigneto_9_rome.json"
     }
   ],
-  "owned": []
+  "owned": [
+    {
+      "id": "portonaccio_50_rome",
+      "name": "Via di Portonaccio 48-50-52",
+      "city": "Rome",
+      "gla_sqm": null,
+      "purchase_price_eur": 11300000,
+      "nbo_date": "2026-03-23",
+      "broker": "JLL + Logista",
+      "status": "reference_partial",
+      "data_complete": false,
+      "notes": "Teaser pending — GLA and physical data to be filled in",
+      "file": "properties/owned/portonaccio_50_rome.json"
+    }
+  ],
+  "market_reports": [
+    {
+      "id": "italy_pbsa_2026_gsl",
+      "title": "Students in PBSA in Italy — GSL Market DNA",
+      "country": "Italy",
+      "date": "2026-03-23",
+      "file": "market_reports/italy_pbsa_2026_gsl.json"
+    }
+  ]
 }

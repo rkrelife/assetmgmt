@@ -6,6 +6,8 @@ Usage:
   python catalog.py show <id>             - show full property details
   python catalog.py compare <id1> <id2>  - side-by-side comparison
   python catalog.py score <id>           - print student housing score card
+  python catalog.py market <city>        - show market benchmarks for a city
+  python catalog.py reports              - list available market reports
 """
 
 import json
@@ -50,7 +52,9 @@ def list_properties():
     if not cat["owned"]:
         print("  (none yet — add your purchased buildings to benchmark against)\n")
     for p in cat["owned"]:
-        print(f"  [{p['id']}]  {p['name']}, {p['city']}  |  {p['gla_sqm']:,} sqm")
+        gla = f"{p['gla_sqm']:,} sqm" if p.get("gla_sqm") else "GLA TBD"
+        complete = "" if p.get("data_complete", True) else "  [data incomplete]"
+        print(f"  [{p['id']}]  {p['name']}, {p['city']}  |  {gla}{complete}")
         print()
 
 
@@ -148,6 +152,97 @@ def score_card(prop_id):
     print()
 
 
+def load_market_report(report_id):
+    cat = load_catalog()
+    entry = next((r for r in cat.get("market_reports", []) if r["id"] == report_id), None)
+    if not entry:
+        return None
+    with open(BASE / entry["file"]) as f:
+        return json.load(f)
+
+
+def market_benchmarks(city):
+    cat = load_catalog()
+    reports = cat.get("market_reports", [])
+    if not reports:
+        print("No market reports loaded yet.")
+        return
+
+    city_cap = city.strip().title()
+    found = False
+    for r_entry in reports:
+        report = load_market_report(r_entry["id"])
+        if not report:
+            continue
+
+        city_data = report.get("city_profiles", {}).get(city_cap)
+        prime_rent = report.get("rental_prices_prime_pbsa_per_month_eur", {}).get(city_cap)
+        shared_rent = report.get("rental_prices_private_shared_rooms_per_month_eur", {}).get(city_cap)
+        unis = [u for u in report.get("universities_by_international_enrollment_2024_25", [])
+                if u.get("city", "").lower() == city_cap.lower()]
+
+        if not city_data and not prime_rent and not unis:
+            continue
+
+        found = True
+        print(f"\n{'='*60}")
+        print(f"MARKET BENCHMARKS: {city_cap}  |  Source: {report['publisher']} {report['date'][:4]}")
+        print(f"{'='*60}")
+
+        print(f"\n  DEMAND")
+        d = report["demand"]
+        print(f"    Italy total HE students:   {d['total_students_he_2024_25']:,}")
+        print(f"    International students:    {d['international_students_2024_25']:,} (+{d['international_yoy_growth_pct']}% YoY)")
+        if city_data:
+            print(f"\n  {city_cap.upper()} PROFILE")
+            for k, v in city_data.items():
+                if v is not None:
+                    print(f"    {k.replace('_', ' ').title():<30} {v}")
+
+        print(f"\n  RENTAL PRICES")
+        if prime_rent:
+            print(f"    Prime PBSA (all-in):       €{prime_rent:,}/month")
+        if shared_rent:
+            print(f"    Private shared room:       €{shared_rent['low']}–€{shared_rent['high']}/month")
+
+        if unis:
+            print(f"\n  UNIVERSITIES (international enrollment 2024/25)")
+            for u in unis:
+                growth = f"+{u['5yr_growth_pct']}% (5yr)" if u.get("5yr_growth_pct") else ""
+                print(f"    {u['university']:<25} {u['intl_students']:>6} intl students  {growth}")
+
+        print(f"\n  SUPPLY (national context)")
+        s = report["supply"]
+        print(f"    National bed stock:        ~{s['total_beds_national']:,}")
+        print(f"    Private sector share:      {s['private_sector_share_current_pct']}% (was {s['private_sector_share_2021_pct']}% in 2021)")
+        p = s["pipeline_by_2027"]
+        city_pipe = p.get(f"{city_cap.lower()}_beds_in_development") or p.get(f"{city_cap.lower()}_new_facilities_30mo")
+        if city_pipe:
+            print(f"    Pipeline beds ({city_cap}):     {city_pipe:,}")
+
+        print(f"\n  KEY DESIGN IMPLICATIONS")
+        for imp in report.get("key_design_implications", []):
+            print(f"    - {imp}")
+        print()
+
+    if not found:
+        available = list(next(load_market_report(r["id"]) for r in reports
+                              if load_market_report(r["id"]))
+                         .get("rental_prices_prime_pbsa_per_month_eur", {}).keys())
+        print(f"No market data found for '{city_cap}'. Available: {', '.join(available)}")
+
+
+def list_reports():
+    cat = load_catalog()
+    reports = cat.get("market_reports", [])
+    print(f"\n--- MARKET REPORTS ({len(reports)}) ---")
+    for r in reports:
+        print(f"  [{r['id']}]  {r['title']}")
+        print(f"    Country: {r['country']} | Date: {r['date']}")
+        print(f"    File:    {r['file']}")
+        print()
+
+
 if __name__ == "__main__":
     args = sys.argv[1:]
     if not args or args[0] == "list":
@@ -158,5 +253,9 @@ if __name__ == "__main__":
         compare_properties(args[1], args[2])
     elif args[0] == "score" and len(args) == 2:
         score_card(args[1])
+    elif args[0] == "market" and len(args) == 2:
+        market_benchmarks(args[1])
+    elif args[0] == "reports":
+        list_reports()
     else:
         print(__doc__)
