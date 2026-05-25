@@ -1,5 +1,5 @@
 {
-  "catalog_version": "1.2",
+  "catalog_version": "1.3",
   "last_updated": "2026-05-25",
   "summary": {
     "total_candidates": 1,
@@ -43,6 +43,13 @@
       "country": "Italy",
       "date": "2026-03-23",
       "file": "market_reports/italy_pbsa_2026_gsl.json"
+    },
+    {
+      "id": "europe_pbsa_2026_tcf",
+      "title": "The Class Foundation — Impact Report 2026 + Boardroom Feb 2026",
+      "country": "Europe",
+      "date": "2026-02-17",
+      "file": "market_reports/europe_pbsa_2026_tcf.json"
     }
   ]
 }
