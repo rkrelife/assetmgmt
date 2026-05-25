@@ -1,0 +1,25 @@
+{
+  "catalog_version": "1.0",
+  "last_updated": "2026-05-25",
+  "summary": {
+    "total_candidates": 1,
+    "total_owned": 0,
+    "pending_assessment": 1,
+    "approved": 0,
+    "rejected": 0
+  },
+  "candidates": [
+    {
+      "id": "pigneto_9_rome",
+      "name": "Pigneto 9",
+      "city": "Rome",
+      "gla_sqm": 5786,
+      "date_received": "2026-05-25",
+      "broker": "JLL",
+      "market_status": "Off Market",
+      "student_housing_verdict": "pending",
+      "file": "properties/candidates/pigneto_9_rome.json"
+    }
+  ],
+  "owned": []
+}
