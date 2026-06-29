@@ -1,0 +1,81 @@
+{
+  "id": "relife_bp_v9_2026",
+  "title": "RELIFE S.R.L. - Corporate Business Plan v9 (Sintetico)",
+  "source_file": "c87d36e2-RELIFE_SRL_CORPORATE_BUSINESS_PLAN_v9__SINTETICO.xlsx",
+  "as_of": "2026-06-29",
+  "entity_type": "Operating company (asset-light operator) — distinct from property-owning SPVs",
+  "real_vs_projected": {
+    "real_actuals": [2024, 2025, 2026],
+    "projected": [2027, 2028, 2029, 2030, 2031]
+  },
+
+  "beds_under_management": {
+    "2024": 233, "2025": 331, "2026": 331, "2027": 1045,
+    "2028": 2200, "2029": 4143, "2030": 5093, "2031": 5357
+  },
+
+  "properties_by_year_opened": {
+    "2024": ["Turin"],
+    "2027_new": ["Padova", "Rome", "Modena"],
+    "2028_new": ["Pisa", "Turin 2", "Bologna", "Monza", "Siena", "Trieste"],
+    "2029_new": ["Piacenza", "Cagliari", "Mestre", "Verona", "Rome 2"],
+    "2030_new": ["Bari", "Ferrara"],
+    "2031_new": ["Rome 3"]
+  },
+
+  "revenue_as_reported_eur": {
+    "2024": 445262, "2025": 316369, "2026": 363545, "2027": 1287299,
+    "2028": 3811096, "2029": 6355143, "2030": 7249918, "2031": 7968612
+  },
+
+  "revenue_corrected_eur": {
+    "2024": 345812,
+    "note_2024": "2024 'Total Revenues' formula is =SUM(B47:B123), which double-counts Interior advisory, Construction monitoring, Marketing advisory, and Pre-opening fee rows (both their city-breakdown detail AND their subtotal fall inside the range). All other years use the corrected discrete-cell SUM. True 2024 revenue is ~€99,450 (22%) lower than reported.",
+    "2025": 316369, "2026": 363545, "2027": 1287299,
+    "2028": 3811096, "2029": 6355143, "2030": 7249918, "2031": 7968612
+  },
+
+  "ebit_as_reported_eur": {
+    "2024": 183976, "2025": -34713, "2026": -117405, "2027": 486345,
+    "2028": 2480817, "2029": 4752743, "2030": 5366146, "2031": 5830138
+  },
+
+  "ebit_corrected_eur": {
+    "2024": 84526,
+    "note_2024": "Using corrected revenue. True 2024 EBIT margin is 24.4%, not the reported 41.3%.",
+    "2025": -34713, "2026": -117405, "2027": 486345,
+    "2028": 2480817, "2029": 4752743, "2030": 5366146, "2031": 5830138
+  },
+
+  "total_ga_eur": {
+    "2024": 261286, "2025": 351082, "2026": 480950, "2027": 800954,
+    "2028": 1330279, "2029": 1602400, "2030": 1883772, "2031": 2138474
+  },
+
+  "fee_consultant_unmatched_revenue_eur": {
+    "description": "Finance Manager / Marketing & Sales Manager / Digital Marketing cost lines (rows 124-126, e.g. '=40000*0.5') are summed into 'Fee Consultant' and added to Total Revenue, but the matching cost is never included in Total G&A (G&A formula explicitly references rows 132,135,138,145,147,150,170 only). This revenue is recognized at 100% margin with no offsetting expense.",
+    "2024": 20550, "2025": 40982, "2026": 47250, "2027": 90000,
+    "2028": 97500, "2029": 97500, "2030": 105000, "2031": 105000
+  },
+
+  "ceo_compensation_eur": {
+    "2024": 182000, "2025": 182000, "2026": 182000, "2027": 207480,
+    "2028": 236527, "2029": 269641, "2030": 307391, "2031": 350425,
+    "note": "Flat at €182k through the 3 loss/breakeven years (2024-2026), then grows ~6.5% YoY through 2031 — nearly double by 2031."
+  },
+
+  "accommodation_fee_per_bed_eur": {
+    "description": "'Students accommodation' revenue divided by beds. ~6-10x below GSL-reported gross PBSA rents for the same cities, confirming this line is RELIFE's operator/management fee on gross rent collected by the property-owning SPV, not gross rent itself.",
+    "turin_only_per_bed": {
+      "2024": 881, "2025": 741, "2026": 865, "2027": 951,
+      "2028": 992, "2029": 1057, "2030": 1148, "2031": 1208
+    },
+    "implied_fee_pct_of_gross_rent": "9-12%, assuming Turin gross rent of ~€7,500-9,500/bed/yr (mid-market, below GSL's €1,200/mo 'prime' Turin benchmark) — consistent with industry-standard 8-12% PBSA management fee contracts."
+  },
+
+  "market_benchmarks_used": {
+    "pbsa_management_fee_pct_of_gross_revenue": "8-12% (industry standard, web research June 2026)",
+    "asset_light_operator_ebitda_margin_at_scale": "40-55% typical for mature branded hotel/residential operators (Accor/IHG-style); RELIFE projects 65-75% by 2029-2031, which is above typical mature-operator range",
+    "pbsa_real_estate_portfolio_transactions_2025": "Nido/Livensa: EUR 1.2bn for ~9,000 beds (~EUR133k/bed) — a real-estate (NAV) transaction, NOT a comparable for valuing RELIFE as a pure management platform"
+  }
+}
