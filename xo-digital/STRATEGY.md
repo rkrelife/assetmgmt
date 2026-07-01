@@ -1,70 +1,81 @@
 # XO Digital — Strategy
 
-## 1. Regulatory frame (the box we operate in)
-CVM Resolution 88 governs investment crowdfunding in Brazil. Key constraints that
-shape product and strategy:
-- Offers are capped per issuer (annual fundraising limit per company).
-- Retail investors have per-investor annual investment limits tied to income/assets,
-  unless they qualify as "investidor qualificado."
-- Mandatory disclosure, a standardized "lâmina"/offer sheet, and a cooling-off /
-  withdrawal right for investors.
-- The platform is responsible for investor suitability and for verifying limits.
+## 0. Where we actually are (status)
+Not pre-launch — we have a **proven MVP with real money through it**:
+- ✅ CVM 88 authorization obtained
+- ✅ WhatsApp-native platform live and working (register, invest, portfolio in chat)
+- ✅ Banking connections built and tested
+- ✅ Real products issued; founders invested in notes and received **principal +
+  interest back on schedule** (1–2 week notes) — the full loop works end-to-end
 
-Implication: compliance is a **core platform constraint**, not overhead. The
-per-investor limit directly bounds how much each of the "millions of customers" can
-deploy — the R$1,000–10,000 ticket fits retail caps well, which validates the model.
+**Strategic implication:** the risk is no longer "can we build it / is it legal." Those
+are answered. The risk is now **scale**: getting supply (offers) and demand (investors)
+to grow together without breaking trust, unit economics, or compliance.
 
-## 2. Wedge: WhatsApp-native investing
-Be among the first platforms where the **full regulated loop** lives in WhatsApp:
-registration, KYC, suitability questionnaire, investing, signed subscription,
-portfolio, statements, and support.
+## 1. Regulatory frame (the box)
+CVM 88 governs the crowdfunding offers. Key operating constraints:
+- Per-issuer annual fundraising cap; per-investor annual limits for retail.
+- Mandatory disclosure (lâmina), suitability, withdrawal right, fund segregation.
+- The platform owns investor protection, limit enforcement, AML/PLD, and CVM reporting.
+The R$1,000–10,000 ticket fits retail caps well — the model is *designed* for scale.
 
-Why it fits this segment:
-- WhatsApp is the default interface for Brazilian retail; near-universal penetration.
-- Removes the highest-friction step for first-time investors — downloading/learning an app.
-- Conversational onboarding can make a regulated, intimidating product feel approachable.
+## 2. The wedge (now proven, not theoretical)
+Full regulated investing loop inside WhatsApp. It's built and working. The moat is now
+**execution speed + brand trust + supply relationships**, because "WhatsApp-first" as an
+idea can be copied — a live, licensed, money-tested platform cannot be, quickly.
 
-What this actually requires (this is a real engineering + compliance bet, not a chatbot):
-- WhatsApp Business / Cloud API at scale, with templated + session messaging.
-- Conversational KYC with document capture and liveness, feeding a real identity check.
-- Suitability questionnaire and limit enforcement inside the chat flow.
-- Legally valid e-signature / consent for subscriptions within WhatsApp.
-- PIX integration for funding and redemptions.
-- Accurate ledger + portfolio statements deliverable in-chat and as documents.
+## 3. The scaling engine — two sides must grow together
+This is the whole game now.
 
-## 3. Target customer & unit economics
-- Retail / middle-market Brazilian investors, R$1,000–10,000 per offer.
-- Volume thesis (millions of customers) means **cost-per-user must be tiny**:
-  - CAC via WhatsApp/Instagram virality and referral, not paid app-install funnels.
-  - KYC cost-per-user matters at millions of users — negotiate per-check pricing.
-  - Support must be largely automated; WhatsApp conversation costs scale with volume
-    and must be modeled into the P&L (this can quietly become a major cost line).
-- Revenue: platform/structuring fees on offers (supply side) + possible spread/fees.
-  Confirm what CVM 88 permits the platform to charge and to whom.
+**Supply (offers) — likely the binding constraint**
+- Owned by the Chief Credit Officer (Founder/family #1).
+- Need a **repeatable pipeline of quality issuers**, not one-off deals.
+- Underwrite the early cohort conservatively: **one early default at small scale can
+  destroy the trust you'll need at large scale.** Repayment track record is the asset.
+- Target: a rolling calendar of offers so investors always have somewhere to deploy.
 
-## 4. Two sides — sequencing
-The classic marketplace chicken-and-egg. Demand (investors) is the visible bet, but
-**supply (quality offers) is the binding constraint**:
-- You can acquire millions of investors and have nothing compelling to offer them.
-- Recommend: secure a credible **launch pipeline of offers** (the 2 funding founders'
-  job) *before* opening the demand floodgates. Quality and timely repayment of the
-  first offers define platform trust forever.
+**Demand (investors)**
+- Owned by a new Head of Growth.
+- Channels: Instagram (ShowXO Digital Oficial), WhatsApp virality, and **referral** —
+  low-ticket mass-retail can't be bought with paid app-install ads profitably; it must
+  grow through word-of-mouth and trust.
+- The proof points ("I put in R$1,000 and got R$1,000 + interest back in 2 weeks") are
+  your best marketing. Turn real repayment stories into content.
 
-## 5. Go-to-market phases
-- **Phase 0 — Pre-launch (now):** lock team roles, name a compliance owner, build the
-  WhatsApp MVP for one full offer end-to-end, line up the first 2–3 issuers.
-- **Phase 1 — Soft launch:** invite-only / waitlist via Instagram; first offers with a
-  controlled investor cohort; instrument everything; prove the WhatsApp loop and repayment.
-- **Phase 2 — Scale demand:** referral mechanics, content, Instagram growth, press the
-  "first fully-WhatsApp investing platform in Brazil" story.
-- **Phase 3 — Broaden supply:** more issuers, more offer types, deeper underwriting.
+## 4. Next steps — sequenced roadmap
 
-## 6. Open risks to resolve before launch
-1. **Offer pipeline depth** vs. demand ambition — is there enough supply for scale?
-2. **WhatsApp API cost at scale** — model conversation costs into unit economics.
-3. **Chat-native KYC/suitability** — confirm with legal it satisfies CVM 88 as the
-   *sole* channel; may need a web fallback for certain regulated steps.
-4. **First-offer repayment risk** — early defaults would kill trust; underwrite the
-   launch cohort conservatively.
-5. **Differentiation durability** — "WhatsApp-first" can be copied; the moat is
-   execution speed, brand trust, and supply relationships.
+**Now → 1 month: harden the team & the loop**
+- Resolve the two org decisions (compliance owner; equity for the 2 tech employees).
+- Name Head of Growth as first external hire.
+- Instrument everything: funnel metrics, cost-per-user (KYC, WhatsApp msgs), repayment.
+
+**1 → 3 months: controlled scale (soft public launch)**
+- Open beyond founders to a **waitlist / invite cohort** via Instagram.
+- Run a steady cadence of small, well-underwritten offers.
+- Prove the metrics hold with strangers' money, not just founders': onboarding
+  completion, default rate = 0, support load per user, WhatsApp cost per user.
+
+**3 → 6 months: scale demand**
+- Turn on referral mechanics; push content and PR: *"first fully-WhatsApp,
+  CVM-authorized investing platform in Brazil, already paying investors back."*
+- Grow the issuer pipeline in parallel so supply keeps pace with demand.
+
+**6 → 12 months: deepen**
+- More issuers, more offer types/tenors, better underwriting, possible capital raise
+  to fund growth. Use the live track record as the fundraising centerpiece.
+
+## 5. Metrics to watch (define targets now)
+- **Default rate** on issued notes — must stay ~0 in early cohorts. #1 trust metric.
+- **Onboarding completion** in WhatsApp (start → funded investment).
+- **CAC & payback** — should be dominated by referral, not paid ads.
+- **WhatsApp cost per active user** — conversation costs scale with volume; watch it.
+- **Deployed capital / active investor** and **repeat investment rate** — do people
+  come back for the next offer? That's the real product-market-fit signal.
+- **Offer fill rate & time-to-fill** — supply/demand balance.
+
+## 6. Open risks
+1. **Supply can't keep pace** with demand growth → idle investors, lost trust.
+2. **An early default** at small scale → outsized reputational damage.
+3. **WhatsApp cost at scale** eroding low-ticket unit economics.
+4. **Key-person risk** on the 2 tech employees who built the platform (mitigate: equity).
+5. **Compliance stretched** as volume grows → must be a full-time owned function before scale.
