@@ -1,0 +1,63 @@
+name: XO Digital Competitor Watch
+
+# Weekly competitor + market intelligence run for XO Digital.
+# Researches AmFi, PeerBR, Liqi and CVM 88 developments, updates the log, and commits it.
+
+on:
+  schedule:
+    # Mondays at 09:37 UTC. Adjust if you want a different time.
+    - cron: "37 9 * * 1"
+  workflow_dispatch: {} # allows manual "Run workflow" from the Actions tab
+
+permissions:
+  contents: write
+
+jobs:
+  competitor-watch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout branch
+        uses: actions/checkout@v4
+        with:
+          ref: claude/show-digital-setup-hu7880
+          fetch-depth: 0
+
+      - name: Run Claude competitor-watch
+        uses: anthropics/claude-code-action@v1
+        with:
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          prompt: |
+            You are the XO Digital competitor-watch agent. Follow the brief in
+            xo-digital/agent/competitor-watch.md.
+
+            Using web research, find the last 7 days of news, current offers, and
+            CVM 88 regulatory developments for these competitors:
+              - AmFi (amfi.finance)
+              - PeerBR (peerbr.com)
+              - Liqi (liqi.com.br)
+            Also check for any movement on the CVM 88 reform and any new
+            WhatsApp-native / mass-retail entrant.
+
+            Then edit xo-digital/COMPETITOR_LOG.md: prepend a new dated entry
+            (newest first, keep existing entries) with:
+              - What moved this week per competitor (bullets, sources linked)
+              - Current offers comparison vs XO where available
+              - Regulatory/market direction
+              - A clear "Recommended adjustments" section (2-4 concrete actions)
+            If nothing material changed, write a short entry saying so.
+
+            Keep it tight and factual. Do not invent figures — only state what you
+            can source. Save the file. Do not touch any other files.
+          claude_args: "--allowedTools WebSearch,WebFetch,Read,Edit,Write"
+
+      - name: Commit and push the updated log
+        run: |
+          git config user.name "xo-competitor-watch[bot]"
+          git config user.email "actions@github.com"
+          if ! git diff --quiet -- xo-digital/COMPETITOR_LOG.md; then
+            git add xo-digital/COMPETITOR_LOG.md
+            git commit -m "Weekly competitor watch update ($(date -u +%Y-%m-%d))"
+            git push origin claude/show-digital-setup-hu7880
+          else
+            echo "No changes to commit."
+          fi
