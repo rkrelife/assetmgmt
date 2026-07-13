@@ -1,0 +1,26 @@
+name: Daily To-Do Email
+
+on:
+  schedule:
+    # 10:30 UTC = 07:30 America/Sao_Paulo (-03:00), no daylight saving in Brazil currently
+    - cron: "30 10 * * *"
+  workflow_dispatch: {}   # lets you trigger it manually from the Actions tab to test
+
+jobs:
+  send-todo-email:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Send daily to-do email
+        env:
+          EMAIL_ADDRESS: ${{ secrets.EMAIL_ADDRESS }}
+          EMAIL_PASSWORD: ${{ secrets.EMAIL_PASSWORD }}
+          EMAIL_TO: ${{ secrets.EMAIL_TO }}
+        run: python todo/send_todo.py
