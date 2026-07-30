@@ -1,13 +1,110 @@
 {
-  "next_id": 9,
+  "next_id": 16,
   "items": [
-    {"id": 1, "text": "Call back Hugo", "status": "open", "created": "2026-07-13", "completed": null},
-    {"id": 2, "text": "Email GVA Art to confirm painting arrived and is stored", "status": "open", "created": "2026-07-13", "completed": null},
-    {"id": 3, "text": "Reply to Michaela's email on AI with follow-up steps", "status": "open", "created": "2026-07-13", "completed": null},
-    {"id": 4, "text": "Chico da Silva catalogue raisonné inclusion — follow up", "status": "open", "created": "2026-07-13", "completed": null},
-    {"id": 5, "text": "Francesca proposition — draft pricing (€100/bed PropCo, €25/bed OpCo — beds vs rooms still TBD)", "status": "open", "created": "2026-07-13", "completed": null},
-    {"id": 6, "text": "Reply to Joslin on retail OpCo PE deal — confirm interest, sign NDA, start due diligence", "status": "open", "created": "2026-07-13", "completed": null},
-    {"id": 7, "text": "Check with Thomas: cash position for Via Brigata and Via Paolo Sarpi — confirm runway for next few months", "status": "open", "created": "2026-07-13", "completed": null},
-    {"id": 8, "text": "Send email re: Makama accounting and closing the company", "status": "open", "created": "2026-07-13", "completed": null}
+    {
+      "id": 1,
+      "text": "Call back Hugo",
+      "status": "open",
+      "created": "2026-07-13",
+      "completed": null
+    },
+    {
+      "id": 2,
+      "text": "Email GVA Art to confirm painting arrived and is stored",
+      "status": "open",
+      "created": "2026-07-13",
+      "completed": null
+    },
+    {
+      "id": 3,
+      "text": "Reply to Michaela's email on AI with follow-up steps",
+      "status": "open",
+      "created": "2026-07-13",
+      "completed": null
+    },
+    {
+      "id": 4,
+      "text": "Chico da Silva catalogue raisonné inclusion — follow up",
+      "status": "open",
+      "created": "2026-07-13",
+      "completed": null
+    },
+    {
+      "id": 5,
+      "text": "Francesca proposition — draft pricing (€100/bed PropCo, €25/bed OpCo — beds vs rooms still TBD)",
+      "status": "open",
+      "created": "2026-07-13",
+      "completed": null
+    },
+    {
+      "id": 6,
+      "text": "Reply to Joslin on retail OpCo PE deal — confirm interest, sign NDA, start due diligence",
+      "status": "open",
+      "created": "2026-07-13",
+      "completed": null
+    },
+    {
+      "id": 7,
+      "text": "Check with Thomas: cash position for Via Brigata and Via Paolo Sarpi — confirm runway for next few months",
+      "status": "open",
+      "created": "2026-07-13",
+      "completed": null
+    },
+    {
+      "id": 8,
+      "text": "Send email re: Makama accounting and closing the company",
+      "status": "open",
+      "created": "2026-07-13",
+      "completed": null
+    },
+    {
+      "id": 9,
+      "text": "Reply to Sternberg",
+      "status": "open",
+      "created": "2026-07-30",
+      "completed": null
+    },
+    {
+      "id": 10,
+      "text": "Order vodka",
+      "status": "open",
+      "created": "2026-07-30",
+      "completed": null
+    },
+    {
+      "id": 11,
+      "text": "Order wine for Naomi",
+      "status": "open",
+      "created": "2026-07-30",
+      "completed": null
+    },
+    {
+      "id": 12,
+      "text": "Reply to Jamie",
+      "status": "open",
+      "created": "2026-07-30",
+      "completed": null
+    },
+    {
+      "id": 13,
+      "text": "Send email to HIG",
+      "status": "open",
+      "created": "2026-07-30",
+      "completed": null
+    },
+    {
+      "id": 14,
+      "text": "Send email to Alan Lee",
+      "status": "open",
+      "created": "2026-07-30",
+      "completed": null
+    },
+    {
+      "id": 15,
+      "text": "Respond to [NAME - unclear, check transcript] re: Pisa sale document",
+      "status": "open",
+      "created": "2026-07-30",
+      "completed": null
+    }
   ]
 }
