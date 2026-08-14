@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 """
-Sends the open items from todo.json as a daily email via Outlook/Office365 SMTP.
+Sends the open items from todo.json as a daily email via Bluewin (Swisscom) SMTP.
 
 Required environment variables (set as GitHub Actions secrets):
-  EMAIL_ADDRESS   - the Outlook address sending the email (e.g. you@outlook.com)
-  EMAIL_PASSWORD  - an app password for that account (not your normal login password)
-  EMAIL_TO        - the address the daily list should be sent to (can be the same as EMAIL_ADDRESS)
+  EMAIL_ADDRESS   - the Bluewin address sending the email (e.g. you@bluewin.ch)
+  EMAIL_PASSWORD  - the password for that Bluewin account
+  EMAIL_TO        - the address the daily list should be sent to (defaults to rkattan@bluewin.ch)
 """
 
 import json
@@ -15,8 +15,8 @@ import sys
 from datetime import date, timedelta
 from email.mime.text import MIMEText
 
-SMTP_SERVER = "smtp.office365.com"
-SMTP_PORT = 587
+SMTP_SERVER = "smtpauths.bluewin.ch"
+SMTP_PORT = 465  # implicit SSL/TLS
 TODO_FILE = os.path.join(os.path.dirname(__file__), "todo.json")
 RECENT_DAYS = 3  # how many days back to show in the "recently completed" section
 
@@ -64,8 +64,7 @@ def send_email(subject: str, body: str) -> None:
     msg["From"] = sender
     msg["To"] = recipient
 
-    with smtplib.SMTP(SMTP_SERVER, SMTP_PORT) as server:
-        server.starttls()
+    with smtplib.SMTP_SSL(SMTP_SERVER, SMTP_PORT) as server:
         server.login(sender, password)
         server.sendmail(sender, [recipient], msg.as_string())
 
