@@ -39,20 +39,15 @@ edit the JSON, commit) — a little more fiddly but no local setup needed.
 The code is already committed to this repo (`assetmgmt`). You only need to add
 the email credentials as GitHub Actions secrets.
 
-1. **Create an Outlook app password.**
-   Outlook/Office365 accounts with modern authentication won't accept your
-   normal password for SMTP. Go to
-   https://account.microsoft.com/security → Advanced security options →
-   App passwords, and generate one. Use this instead of your login password.
-   (If your account uses OAuth-only / school-or-work tenant restrictions,
-   an admin may need to enable app passwords or SMTP AUTH first.)
+1. **Add GitHub repo secrets.**
+   The email is sent through Bluewin's SMTP server (`smtpauths.bluewin.ch`,
+   SSL port 465). In the repo: Settings → Secrets and variables → Actions →
+   New repository secret. Add these two:
+   - `EMAIL_ADDRESS` — your Bluewin address (the sender, e.g. `rkattan@bluewin.ch`)
+   - `EMAIL_PASSWORD` — the password for that Bluewin account
 
-2. **Add GitHub repo secrets.**
-   In the repo: Settings → Secrets and variables → Actions → New repository secret.
-   Add these three:
-   - `EMAIL_ADDRESS` — your Outlook address (the sender)
-   - `EMAIL_PASSWORD` — the app password from step 1
-   - `EMAIL_TO` — the address you want the list sent to (can be the same address)
+   `EMAIL_TO` is optional — it defaults to `rkattan@bluewin.ch`. Add it only if
+   you want the list sent somewhere else.
 
 3. **Test it manually.**
    In the repo: Actions tab → "Daily To-Do Email" workflow → "Run workflow"
