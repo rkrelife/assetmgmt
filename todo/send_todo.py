@@ -57,7 +57,7 @@ def build_email_body(data: dict) -> str:
 def send_email(subject: str, body: str) -> None:
     sender = os.environ["EMAIL_ADDRESS"]
     password = os.environ["EMAIL_PASSWORD"]
-    recipient = os.environ.get("EMAIL_TO", "rkattan@bluewin.ch")
+    recipient = os.environ.get("EMAIL_TO") or "rkattan@bluewin.ch"
 
     msg = MIMEText(body, "plain", "utf-8")
     msg["Subject"] = subject
