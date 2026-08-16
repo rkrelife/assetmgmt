@@ -1,0 +1,73 @@
+{
+  "id": "pigneto_9_rome",
+  "type": "candidate",
+  "status": "under_review",
+  "date_received": "2026-05-25",
+  "source_file": "354477a9-Flyer_Pigneto_9_May_26.pdf",
+  "broker": "JLL (Jones Lang LaSalle)",
+  "broker_contacts": {
+    "milan": "Via Agnello 8, 20121 Milano | +39 02 85 86 86 1",
+    "rome": "Via Bissolati 20, 00187 Roma | +39 06 42 00 67 1"
+  },
+
+  "property": {
+    "name": "Pigneto 9",
+    "address": "Piazza del Pigneto, 9",
+    "city": "Rome",
+    "country": "Italy",
+    "neighborhood": "Pigneto",
+    "location_tier": "Semicentre",
+    "market_status": "Off Market"
+  },
+
+  "physical": {
+    "gla_sqm": 5786,
+    "above_ground_floors": 4,
+    "basement_floors": 1,
+    "building_shape": "Linear, 4 rectangular floors",
+    "courtyard": true,
+    "courtyard_notes": "Internal courtyard shared with adjacent buildings",
+    "floors": {
+      "ground_floor_sqm": 1161,
+      "floor_1_sqm": 1227,
+      "floor_2_sqm": 1231,
+      "floor_3_sqm": 1087,
+      "basement_s2_sqm": 240
+    },
+    "parking": {
+      "car_spaces": 60,
+      "motorbike_spaces": 20,
+      "car_parking_sqm": 780,
+      "motorbike_parking_sqm": 60
+    },
+    "amenities_existing": ["Canteen (basement)"]
+  },
+
+  "current_status": {
+    "current_use": "Office",
+    "cadastral_category": "D/8",
+    "occupancy_pct": 0,
+    "condition": "Fully vacant"
+  },
+
+  "asset_profile": {
+    "jll_classification": "Value-Add",
+    "conversion_potential_per_broker": "Hospitality and Collective Residences",
+    "broker_note": "Preliminary assessment, to be further diligenced"
+  },
+
+  "financials": {
+    "asking_price_eur": null,
+    "price_per_sqm_eur": null,
+    "current_noi_eur": 0,
+    "notes": "No pricing disclosed in flyer"
+  },
+
+  "student_housing_assessment": {
+    "score": null,
+    "verdict": "pending",
+    "notes": []
+  },
+
+  "tags": ["rome", "office-to-resi", "vacant", "value-add", "semicentre", "pigneto", "jll", "off-market"]
+}

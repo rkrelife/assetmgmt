@@ -1,0 +1,84 @@
+{
+  "id": "europe_pbsa_2026_tcf",
+  "title": "The Class Foundation — Impact Report 2026 + Boardroom Feb 2026",
+  "publisher": "The Class Foundation (TCF)",
+  "date": "2026-02-17",
+  "scope": "Europe (15 countries)",
+  "source_files": [
+    "8b1d6515-TCF_Impact_Report_2026.pdf",
+    "1efe395d-Boardroom_TCF_February_2026.pptx.pdf"
+  ],
+
+  "macro_context": {
+    "european_beds_represented_by_tcf": 3000000,
+    "unmet_demand_by_2030_beds": 3200000,
+    "investment_opportunity_eur": "450 billion",
+    "eu_commission_position": "Student housing formally recognised as critical infrastructure in the European Affordable Housing Plan",
+    "eu_commission_quote": "Students are disproportionately affected by the housing crisis, with significant social and economic consequences",
+    "policy_direction": "EU Commission committed to mobilise investment, enable state-aid flexibility, and unlock private capital for affordable PBSA"
+  },
+
+  "investment_barometer_2025": {
+    "source": "TCF + Savills",
+    "respondents": 18,
+    "beds_managed": 136000,
+    "combined_asset_value_eur": "18.8bn+",
+    "portfolio_growth_expected_pct": 70,
+    "new_capital_to_deploy_eur": "20bn",
+    "key_investor_concerns": ["regulation", "affordability", "ESG readiness"]
+  },
+
+  "tcf_market_coverage_by_country_pct": {
+    "Netherlands": 80,
+    "Spain":        80,
+    "UK":           50,
+    "France":       40,
+    "Germany":      35,
+    "Italy":        35
+  },
+
+  "national_action_frameworks": ["Italy", "France", "Spain", "Netherlands", "UK"],
+
+  "student_living_monitor": {
+    "responses": 20000,
+    "years": 3,
+    "mental_health_index_mhi5": {
+      "3yr_european_average": 58,
+      "2023": 57.0,
+      "2024": 57.8,
+      "2025": 58.08
+    },
+    "highest_impact_design_factors": [
+      "Green areas / outdoor space",
+      "Study spaces",
+      "Mental health services",
+      "Career services"
+    ],
+    "first_choice_accommodation_wellbeing_uplift": "Students who got first-choice accommodation score 8 points higher on wellbeing scale",
+    "notes": "50 organisations contributed; available to TCF partners via interactive dashboard (200+ filters)"
+  },
+
+  "legalities_report": {
+    "countries_covered": 11,
+    "partners": ["Loyens & Loeff", "Osborne Clarke", "GSK"],
+    "focus": "Legal, regulatory, and tax frameworks for PBSA — cross-border investment reference"
+  },
+
+  "tcf_2026_events": [
+    {"event": "Community Hubs (online)", "dates": "23-25 Feb, 22-25 Jun 2026"},
+    {"event": "MIPIM (with Student Crowd)", "dates": "2026"},
+    {"event": "UKREiiF Roundtable (Luna/Torsion)", "dates": "2026"},
+    {"event": "Student Living Forums", "cities": ["London", "Paris", "Madrid"]},
+    {"event": "The Class Conference", "city": "Amsterdam", "dates": "2026"}
+  ],
+
+  "key_implications_for_investor": [
+    "EU-level political tailwind: student housing now explicitly in EU Affordable Housing Plan",
+    "PPPs being actively promoted — co-investment with public sector viable",
+    "Europe-wide unmet demand of 3.2M beds = structural undersupply not a cyclical dip",
+    "€450bn investment opportunity projected to 2030",
+    "Investors surveyed plan 70%+ portfolio growth and €20bn new capital deployment",
+    "Italy covered at only 35% by institutional PBSA — large gap vs Spain/Netherlands at 80%",
+    "Wellbeing data: getting first-choice accommodation = +8pts on MHI5 — quality matters for retention/satisfaction"
+  ]
+}

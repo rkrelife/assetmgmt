@@ -1,0 +1,192 @@
+{
+  "id": "italy_pbsa_2026_gsl",
+  "title": "Students in PBSA in Italy — Market DNA Report Extract",
+  "publisher": "GSL (Global Student Living)",
+  "event": "GSL Executive Meeting Series — Italy",
+  "date": "2026-03-23",
+  "source_file": "6e973875-2026_GSL_Executive_Meeting_Series_Italy__Market_Report.pdf",
+  "country": "Italy",
+
+  "demand": {
+    "total_students_he_2024_25": 2026925,
+    "growth_vs_2015_pct": 20.6,
+    "international_students_2024_25": 110566,
+    "international_yoy_growth_pct": 14.3,
+    "international_10yr_growth_pct": 167.2,
+    "english_taught_programs": 1275,
+    "english_taught_growth_since_2019_pct": 30,
+    "italy_rank_english_taught_europe": 5,
+    "italy_rank_global_study_destination": 14,
+    "us_students_studying_in_italy_2023_24": 45067,
+    "italy_rank_for_us_study_abroad": 1,
+    "erasmus_arrivals_2024": 113186,
+    "mobile_students_pct": 33,
+    "top_sending_countries": [
+      {"country": "Iran",       "students": 14017, "5yr_growth_pct": 232},
+      {"country": "Turkey",     "students": 8455,  "5yr_growth_pct": 241},
+      {"country": "China",      "students": 7110,  "5yr_growth_pct": null},
+      {"country": "India",      "students": 4377,  "5yr_growth_pct": null},
+      {"country": "Tunisia",    "students": 4106,  "5yr_growth_pct": 345},
+      {"country": "Kazakhstan", "students": null,  "5yr_growth_pct": 406}
+    ]
+  },
+
+  "supply": {
+    "total_beds_national": 81500,
+    "total_beds_source_jll": 80000,
+    "total_beds_source_savills": 83000,
+    "private_sector_share_2021_pct": 19,
+    "private_sector_share_current_pct": 31,
+    "top5_cities_share_of_national_pct": 50,
+    "milan_share_of_national_pct": 18,
+    "pipeline_by_2027": {
+      "new_projects": 73,
+      "new_beds": 25000,
+      "milan_share_of_pipeline_pct": 33,
+      "rome_new_facilities_30mo": 10,
+      "padova_new_developments": 12,
+      "turin_beds_in_development": 2000,
+      "bologna_beds_in_development": 2000
+    }
+  },
+
+  "rental_prices_prime_pbsa_per_month_eur": {
+    "Milan":    2000,
+    "Rome":     1600,
+    "Florence": 1600,
+    "Bologna":  1300,
+    "Turin":    1200
+  },
+
+  "rental_prices_private_shared_rooms_per_month_eur": {
+    "Rome":    {"low": 350, "high": 650},
+    "Milan":   {"low": 300, "high": 600},
+    "Bologna": {"low": 350, "high": 500}
+  },
+
+  "universities_by_international_enrollment_2024_25": [
+    {"university": "Bologna",          "intl_students": 8222,  "5yr_growth_pct": 73.9,  "city": "Bologna"},
+    {"university": "Milano Politecnico","intl_students": 7952,  "5yr_growth_pct": 475.4, "city": "Milan"},
+    {"university": "Roma La Sapienza", "intl_students": 7593,  "5yr_growth_pct": 40.1,  "city": "Rome"},
+    {"university": "Torino Politecnico","intl_students": 7457,  "5yr_growth_pct": 80.7,  "city": "Turin"},
+    {"university": "Padova",           "intl_students": 6436,  "5yr_growth_pct": 139.8, "city": "Padua"},
+    {"university": "Firenze",          "intl_students": 4120,  "5yr_growth_pct": 52.1,  "city": "Florence"},
+    {"university": "Milano",           "intl_students": 4069,  "5yr_growth_pct": 24.0,  "city": "Milan"},
+    {"university": "Torino",           "intl_students": 3958,  "5yr_growth_pct": 55.9,  "city": "Turin"},
+    {"university": "Milano Bocconi",   "intl_students": 3766,  "5yr_growth_pct": 46.0,  "city": "Milan"},
+    {"university": "Pavia",            "intl_students": 3211,  "5yr_growth_pct": 87.9,  "city": "Pavia"}
+  ],
+
+  "city_profiles": {
+    "Rome": {
+      "student_population": "highest nationally",
+      "intl_students_pct_of_total": null,
+      "mobile_students_pct": null,
+      "prime_pbsa_rent_eur_mo": 1600,
+      "notes": "Intense competition from hotel & STR keeps supply tight and rents elevated"
+    },
+    "Milan": {
+      "student_population": "third nationally",
+      "intl_students_pct_of_total": null,
+      "mobile_students_pct": 32,
+      "prime_pbsa_rent_eur_mo": 2000,
+      "notes": "Primary PBSA market; 18% national bed stock; 33% of pipeline; rents driven by wider residential inflation"
+    },
+    "Bologna": {
+      "student_population": "fifth nationally",
+      "intl_students_pct_of_total": 10,
+      "mobile_students_pct": 49,
+      "prime_pbsa_rent_eur_mo": 1300,
+      "notes": "Highest proportion of mobile students nationally — strong captive PBSA demand"
+    },
+    "Turin": {
+      "student_population": "fourth nationally",
+      "intl_students_pct_of_total": 10,
+      "mobile_students_pct": null,
+      "prime_pbsa_rent_eur_mo": 1200,
+      "notes": "Strong international growth at Politecnico (+80.7%); >2,000 beds in pipeline"
+    },
+    "Pavia": {
+      "student_population": "smaller market",
+      "intl_students_pct_of_total": 12,
+      "mobile_students_pct": 34,
+      "prime_pbsa_rent_eur_mo": null,
+      "notes": "Highest % international students of any city (12%); high mobile students share"
+    },
+    "Padua": {
+      "student_population": "mid-size",
+      "intl_students_pct_of_total": null,
+      "mobile_students_pct": null,
+      "prime_pbsa_rent_eur_mo": null,
+      "notes": "Rising market; 12 new developments planned, 8 of them large-scale (>300 beds)"
+    }
+  },
+
+  "student_preferences": {
+    "search_priorities_ranked": [
+      "Proximity to place of study",
+      "Condition and quality",
+      "Safety and security",
+      "Ensuite bathroom (international students)",
+      "Bedroom size and quality",
+      "Budget / price"
+    ],
+    "top_satisfaction_drivers": [
+      "Design and visual appeal",
+      "Value for money",
+      "Bedroom",
+      "Overall management",
+      "Condition and quality"
+    ],
+    "top_nps_drivers": [
+      "Value for money",
+      "Overall management",
+      "Design and visual appeal",
+      "Bedroom",
+      "Communication"
+    ],
+    "facilities_students_would_pay_more_for": {
+      "domestic":    ["Safety & security", "Study environment", "Bathroom", "Bedroom", "Laundry"],
+      "erasmus":     ["Laundry", "Catering", "Local amenities", "Cleaning of communal areas", "Kitchens"],
+      "non_eu":      ["Laundry", "Catering", "Local amenities", "Noise levels", "Bedroom"]
+    },
+    "wellbeing_drivers": [
+      "Relationships with other residents",
+      "Care and support",
+      "Value for money",
+      "Communication",
+      "Bedroom"
+    ]
+  },
+
+  "room_type_performance": {
+    "studio_flat":      {"satisfaction_positive_pct": 83, "nps": 25.9},
+    "private_bedroom":  {"satisfaction_positive_pct": 75, "nps": 7.9},
+    "shared_bedroom":   {"satisfaction_positive_pct": 71, "nps": 5.8}
+  },
+
+  "bathroom_type_performance": {
+    "ensuite_private":  {"satisfaction_positive_pct": 73, "nps": 14.5},
+    "communal":         {"satisfaction_positive_pct": 67, "nps": -4.9}
+  },
+
+  "funding": {
+    "parents_guardians_pct": {"domestic": 54, "erasmus": 90, "non_eu": 94},
+    "notes": "Parents dominate funding, especially for international students — implies parental approval is key decision factor"
+  },
+
+  "booking_channels": {
+    "notes": "International students increasingly book direct with private operators; domestic book via university housing office or direct with landlord. Direct bookings growing, university-office bookings declining."
+  },
+
+  "key_design_implications": [
+    "Studios strongly outperform shared rooms — design for studio/ensuite where possible",
+    "Ensuite bathrooms are a significant NPS driver vs communal (NPS +14.5 vs -4.9)",
+    "Bedroom size is #1 driver of bedroom satisfaction — do not compromise",
+    "Design and visual appeal is #1 overall satisfaction driver — invest in fit-out",
+    "Laundry is a persistent pain point across all groups — prioritise on-site laundry",
+    "Social spaces and community management drive wellbeing for Italian market",
+    "Catering valued by international students — canteen/kitchen quality matters",
+    "Moving-in experience has 6x retention impact — invest in process and staff welcome"
+  ]
+}
