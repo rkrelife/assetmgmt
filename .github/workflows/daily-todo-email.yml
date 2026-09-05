@@ -1,10 +1,12 @@
 name: Daily To-Do Email
 
 on:
-  schedule:
-    # 10:30 UTC = 07:30 America/Sao_Paulo (-03:00), no daylight saving in Brazil currently
-    - cron: "30 10 * * *"
-  workflow_dispatch: {}   # lets you trigger it manually from the Actions tab to test
+  # Daily schedule disabled at the user's request — no automatic emails.
+  # To re-enable, uncomment the schedule block below.
+  # schedule:
+  #   # 10:30 UTC = 07:30 America/Sao_Paulo (-03:00), no daylight saving in Brazil currently
+  #   - cron: "30 10 * * *"
+  workflow_dispatch: {}   # can still be triggered manually from the Actions tab
 
 jobs:
   send-todo-email:
